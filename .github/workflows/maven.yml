@@ -19,6 +19,8 @@ jobs:
 
     - name: Build project with Maven
       run: mvn -B package --file my-app/pom.xml
+    - name: Running mvn clean install 
+      run: mvn --file my-app/pom.xml clean install
       
   build_on_windows:
     runs-on: windows-latest
