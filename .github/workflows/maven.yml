@@ -21,6 +21,8 @@ jobs:
       run: mvn -B package --file my-app/pom.xml
     - name: Running mvn clean install 
       run: mvn --file my-app/pom.xml clean install
+    - name: Running mvn test 
+      run: mvn --file my-app/pom.xml test
       
   build_on_windows:
     runs-on: windows-latest
