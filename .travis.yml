@@ -1,8 +1,15 @@
-language: java
-jdk: oraclejdk8
+dist: xenial
+os: linux
 
-install: true
-script: ./mvnw --file my-app/pom.xml clean install
+language: java
+jdk:
+ - openjdk8
+ - openjdk11
+
+# faster builds
+sudo: false
+
+script: mvn --file my-app/pom.xml clean install
 
 cache:
   directories:
