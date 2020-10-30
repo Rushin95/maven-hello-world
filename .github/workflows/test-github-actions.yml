@@ -22,12 +22,19 @@ jobs:
         path: ~/.m2
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
-    - name: Build project with Maven
-      run: mvn -B package --file my-app/pom.xml
     - name: Running mvn clean install 
       run: mvn --file my-app/pom.xml clean install
     - name: Running mvn test 
       run: mvn --file my-app/pom.xml test
+    - name: Build Package
+      run: mvn -B package --file my-app/pom.xml
+    - name: Create Directory and copy JAR
+      run: mkdir artifacts && cp my-app/target/*.jar artifacts
+    - name: Upload JAR
+      uses: actions/upload-artifact@v2
+      with:
+        name: Package
+        path: artifacts
 
 # # TODO: Uncomment it later to verify new changes.
 #   build_on_windows:
