@@ -33,7 +33,7 @@ jobs:
     - name: Upload JAR
       uses: actions/upload-artifact@v2
       with:
-        name: Package
+        name: Project Artifact ZIP
         path: artifacts
 
 # # TODO: Uncomment it later to verify new changes.
