@@ -35,6 +35,12 @@ jobs:
       with:
         name: Project Artifact ZIP
         path: artifacts
+    - name: Create GitHub release
+      uses: Roang-zero1/github-create-release-action@test-github-actions
+      with:
+        version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 # # TODO: Uncomment it later to verify new changes.
 #   build_on_windows:
