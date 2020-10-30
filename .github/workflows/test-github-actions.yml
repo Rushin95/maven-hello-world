@@ -36,7 +36,7 @@ jobs:
         name: Project Artifact ZIP
         path: artifacts
     - name: Create GitHub release
-      uses: Roang-zero1/github-create-release-action@test-github-actions
+      uses: Roang-zero1/github-create-release-action@master
       with:
         version_regex: ^v[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+
       env:
