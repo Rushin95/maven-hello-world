@@ -37,6 +37,8 @@ jobs:
         path: artifacts
     - name: Tag/Release on Push Action
       uses: rymndhng/release-on-push-action@v0.15.0
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         bump_version_scheme: minor
 
