@@ -46,6 +46,15 @@ jobs:
 #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #       with:
 #         bump_version_scheme: minor
+    - name: badge-it
+      # You may pin to the exact commit or the version.
+      # uses: RocktimSaikia/badge-it@61d66a36b6af098c1b41103a23be0a5c62c1bb84
+      uses: RocktimSaikia/badge-it@2.0.0
+      with:
+        # github personal token
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # A string array of names of the badges to add
+        badges: 'Build Successful'
 
 # # TODO: Uncomment it later to verify new changes.
 #   build_on_windows:
