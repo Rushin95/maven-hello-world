@@ -1,6 +1,6 @@
 # A simple  minimal Maven example: hello world 
 
-![Build Status](https://github.com/Rushin95/maven-hello-world/tree/test-github-actions/.github/workflows/test-github-actions.yml/badge.svg)
+![Maven CI/CD](https://github.com/Rushin95/maven-hello-world/workflows/Maven%20CI/CD/badge.svg?branch=test-github-actions)
 
 - To create the files in this git repo we've already run `mvn archetype:generate` from http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 
